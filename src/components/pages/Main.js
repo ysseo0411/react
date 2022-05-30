@@ -21,32 +21,32 @@ class Main extends React.Component {
       gsap.to("#header", { duration: 0.8, top: 0 });
       gsap.to("#footer", { duration: 0.8, bottom: 0, delay: 0.2 });
       gsap.to(".main__inner div:nth-child(1)", {
-        duration: 0.8,
-        y: 0,
-        opacity: 1,
-        delay: 1,
-        ease: "power4.out",
-      });
-      gsap.to(".main__inner div:nth-child(2)", {
-        duration: 0.7,
+        duration: 1.0,
         y: 0,
         opacity: 1,
         delay: 1.4,
-        ease: "power4.out",
+        ease: "elastic.out(1, 0.3)",
+      });
+      gsap.to(".main__inner div:nth-child(2)", {
+        duration: 1.0,
+        y: 0,
+        opacity: 1,
+        delay: 1.6,
+        ease: "elastic.out(1, 0.3)",
       });
       gsap.to(".main__inner div:nth-child(3)", {
-        duration: 0.5,
+        duration: 1.0,
         y: 0,
         opacity: 1,
         delay: 1.8,
-        ease: "power4.out",
+        ease: "elastic.out(1, 0.3)",
       });
       gsap.to(".main__inner div:nth-child(4)", {
-        duration: 0.3,
+        duration: 1.0,
         y: 0,
         opacity: 1,
-        delay: 2.1,
-        ease: "power4.out",
+        delay: 2.0,
+        ease: "elastic.out(1, 0.3)",
       });
     }, 10);
   };

@@ -2,13 +2,59 @@ import React, { useEffect, useState } from "react";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 import Contents from "../layout/Contents";
-import MovieSearch from "../includes/MovieSearch";
-import MovieCont from "../includes/MovieCont";
 import Title from "../layout/Title";
+import MovieCont from "../includes/MovieCont";
 import Touch from "../layout/Touch";
+import MovieSearch from "../includes/MovieSearch";
+import Loading from "../includes/Loading";
+import { gsap } from "gsap";
 
 function Movie() {
   const [videos, setVideos] = useState([]);
+
+  const mainAnimation = () => {
+    setTimeout(() => {
+      document.getElementById("loading").classList.remove("loading__active");
+
+      gsap.to("#header", {
+        duration: 0.8,
+        top: 0,
+      });
+      gsap.to("#footer", {
+        duration: 0.8,
+        bottom: 0,
+        delay: 0.2,
+      });
+      gsap.to(".cont__title strong", {
+        duration: 0.7,
+        y: 0,
+        opacity: 1,
+        delay: 1.0,
+        ease: "power4.out",
+      });
+      gsap.to(".cont__title em", {
+        duration: 0.7,
+        y: 0,
+        opacity: 1,
+        delay: 1.3,
+        ease: "power4.out",
+      });
+      gsap.to(".youtube__search", {
+        duration: 0.7,
+        y: 0,
+        opacity: 1,
+        delay: 1.5,
+        ease: "power4.out",
+      });
+      gsap.to(".main__inner", {
+        duration: 0.7,
+        y: 0,
+        opacity: 1,
+        delay: 1.5,
+        ease: "power4.out",
+      });
+    }, 2000);
+  };
 
   const search = (query) => {
     const requestOptions = {
@@ -17,7 +63,7 @@ function Movie() {
     };
 
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=ccceee1e9f3d25b5d2ed4b74fda3eac9&query=${query}`,
+      `https://api.themoviedb.org/3/search/movie?api_key=9278d13f704ad0fe53c2263b692efd89&query=${query}`,
       requestOptions
     )
       .then((response) => response.json())
@@ -32,17 +78,22 @@ function Movie() {
     };
 
     fetch(
-      "https://api.themoviedb.org/3/search/movie?api_key=ccceee1e9f3d25b5d2ed4b74fda3eac9&query=spiderman",
+      "https://api.themoviedb.org/3/search/movie?api_key=9278d13f704ad0fe53c2263b692efd89&query=spiderman",
       requestOptions
     )
       .then((response) => response.json())
-      .then((result) => setVideos(result.results))
+      .then((result) => {
+        setVideos(result.results);
+        mainAnimation();
+      })
       .catch((error) => console.log("error", error));
   }, []);
-  //console.log(videos);
+
+  // console.clear();
 
   return (
     <>
+      <Loading />
       <Header />
       <Contents>
         <Title title={["Movie", "search"]} />
