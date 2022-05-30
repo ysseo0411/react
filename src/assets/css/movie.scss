@@ -1,0 +1,28 @@
+.movie__inner {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    justify-content: center;
+
+    p {
+      color: #8c8b86;
+      font-size: 18px;
+      text-indent: 30px;
+      text-align: center;
+      font-family: var(--subKor_font);
+    }
+
+    li {
+      width: 24%;
+
+      a {
+        color: #fff;
+
+        img {
+          height: 90%;
+        }
+      }
+    }
+  }
+}
