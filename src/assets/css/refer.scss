@@ -1,26 +1,26 @@
 .refer__cont {
-  background-color: var(--black);
+  background-color: #e8d9c7;
   min-height: 100vh;
 }
 
 .refer__list {
-  border-top: 2px solid var(--light_bg);
-  border-bottom: 1px solid var(--light_bg);
+  border-top: 2px solid #928d65;
+  border-bottom: 1px solid #928d65;
 
   a {
     display: block;
-    color: var(--white);
+    color: #928d65;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--light_bg);
+    border-bottom: 1px solid #928d65;
     padding: 1rem 0;
     transition: all 0.3s;
     font-family: var(--subKor_font);
 
     &:hover {
-      background: var(--light_bg);
-      color: var(--black);
+      background: #efe8dd;
+      color: #2c2a1b;
     }
     span {
       display: inline-block;
@@ -44,7 +44,7 @@
 
 .refer__table {
   margin-top: 200px;
-  color: var(--white);
+  color: #928d65;
   font-family: var(--subKor_font);
 
   p {
@@ -54,7 +54,7 @@
   }
 
   .table {
-    color: var(--white);
+    color: #928d65;
     font-family: var(--subKor_font);
     border: 1px solid var(--light_bg);
     margin-top: 0.5em;

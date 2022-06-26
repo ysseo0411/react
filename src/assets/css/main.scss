@@ -3,13 +3,13 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: var(--black);
+  background: #e8d9c7;
 
   .main__inner {
     font-size: 10vw;
     line-height: 0.85;
     font-family: var(--main_font);
-    color: var(--white);
+    color: #928d65;
     text-transform: uppercase;
   }
 }

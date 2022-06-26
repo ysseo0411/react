@@ -1,5 +1,5 @@
 .youtube__cont {
-  background-color: var(--black);
+  background-color: #e8d9c7;
 }
 .youtube__list {
   ul {
@@ -14,7 +14,7 @@
         border-radius: 0.4em;
       }
       p {
-        color: var(--white);
+        color: #928d65;
         font-family: var(--subKor_font);
         padding-top: 10px;
         overflow: hidden;
@@ -39,24 +39,29 @@
     height: 0;
   }
   input {
-    border: 2px solid var(--light_border);
+    border: 1px solid #827b51;
     width: 98%;
-    background: var(--black);
+    background: #e8d9c7;
     border-radius: 50px;
     padding: 1rem 3rem 1rem 2rem;
-    color: var(--light_bg);
+    color: #827b51;
     font-family: var(--subKor_font);
     margin: 0 1%;
     margin-bottom: 5%;
+
+    &:focus {
+      outline: none;
+    }
   }
+
   button {
     position: absolute;
     right: 22px;
     top: 9px;
     background: transparent;
     border: 0;
-    color: var(--black);
-    background: #fff;
+    color: var(--white);
+    background: #928d65;
     font-family: var(—subKor_font);
     width: 40px;
     height: 40px;
